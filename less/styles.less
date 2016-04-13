@@ -4,6 +4,8 @@
 @icon-font-path:          "../bower_components/bootstrap/fonts/";
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+// overwrite bootstrap variables
 @font-family-sans-serif:  'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-size-base: 12px;
 @border-radius-base: 1px;
@@ -12,32 +14,35 @@
 @panel-danger-border: @grey;
 @panel-danger-heading-bg: #cc0000;
 
+// custom variables
 @bg-color: #f6f6f6;
 @grey: #bbb;
+@shadow-color: rgba(0,0,0,.38);
+@panel-background-color: rgba(255,255,255,.94);
+@badge-background-color: #6f0000;
 
 
 body{
-  background: linear-gradient(@bg-color 18px, transparent 18px) 0 -2px, linear-gradient(90deg,  @bg-color 18px, transparent 0px) -2px 0;
+  background:
+    linear-gradient(@bg-color 18px, transparent 18px) 0 -2px,
+    linear-gradient(90deg,  @bg-color 18px, transparent 0px) -2px 0;
   background-color: @grey;
-  background-size:20px 20px;
+  background-size: 20px 20px;
 }
 
 .panel{
-  width: 163px;
-  height: 158px;
-  position: absolute;
-  top: 160px;
-  left: 232px;
-  box-shadow: 0px 3px 6px rgba(0,0,0,.38);
-  background: rgba(255,255,255,.94);
+  margin-top: 200px;
+  min-height: 158px;
+  box-shadow: 0px 3px 6px @shadow-color;
+  background: @panel-background-color;
 }
 
 .panel-heading {
-  padding: 15px 10px;
   .clearfix();
+  padding: 15px 10px;
   margin: -1px -1px 0 -1px;
   border: none;
-  box-shadow: 0px 3px 6px -2px rgba(0,0,0,.38);
+  box-shadow: 0px 3px 6px -2px @shadow-color;
 }
 
 .panel-title {
@@ -49,6 +54,6 @@ body{
   font-size: @font-size-small;
   padding: 0 10px;
   line-height: 20px;
-  background: #6f0000!important;
+  background: @badge-background-color !important;
   color: #fff!important;
 }
