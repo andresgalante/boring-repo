@@ -17,7 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: radial-gradient(ellipse farthest-corner at center top, #ededed 0%, transparent 40%, transparent), linear-gradient( to bottom, #7dc3e8, #def3ff);
+  background-image: radial-gradient(ellipse farthest-corner at center top, #ededed 0%, transparent 40%, transparent), linear-gradient( to bottom, #bbbbbb, #ededed);
   padding: 0 1em;
 }
 
