@@ -28,12 +28,6 @@ body {
   padding: 1px;
 }
 
-@media (min-width: 50em) {
-  .panel {
-    width: 50%;
-  }
-}
-
 .panel--heading {
   background: #4d5258;
   color: white;
@@ -56,6 +50,10 @@ body {
 .panel--body {
   min-height: 10em;
   padding: 1em;
+}
+
+.panel--body h2 {
+  margin: 0;
 }
 
 .nav {
@@ -86,4 +84,45 @@ body {
   -.2rem 0 .5rem -.2rem rgba(0, 0, 0, 0.3),
   .2rem 0 .5rem -.2rem rgba(0, 0, 0, 0.3);
   color: #fff;
+}
+
+.description-list {
+  /*background: red;*/
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em 0 0 0;
+}
+
+.description-list dt {
+    flex: 1 0 30%;
+  margin: 0 0 .5em 0;
+  padding: 0;
+  /*background: orange;*/
+
+}
+
+.description-list dd {
+    flex: 1 0 100%;
+  /*background: yellow;*/
+  margin: 0 0 1em 0;
+  padding: 0;
+  font-weight: 200;
+}
+
+.badge {
+  display: inline-block;
+  background: green;
+  border-radius: .2em;
+  padding: 0 .5em;
+  color: white;
+}
+
+
+@media (min-width: 50em) {
+  .panel {
+    width: 50%;
+  }
+  .description-list dd {
+    flex: 1 0 70%;
+  }
 }
